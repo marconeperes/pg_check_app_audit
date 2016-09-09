@@ -30,8 +30,8 @@ static char* get_appname(List *guc_options) {
 	ListCell *options = guc_options->head;// Celula da lista com a configuração! ASSUMIMOS QUE guc_options JÁ ESTARÁ INICIALIZADA!
 
 	while (options) {			// Percorre a lista de opções...
-		if (strcmp((char *) (options->data.ptr_value), "application_name")) {// ... até encontrar a configuração "application_name"
-			return ((char *) (options->data.ptr_value));// retorna o valor da próxima celula. Essa é uma gamba ridícula, na minha humilde opnião
+		if (strcmp((char *) (options->data.ptr_value), "application_name")) {
+			return ((char *) (options->data.ptr_value));
 		}
 		options = options->next;
 	}
